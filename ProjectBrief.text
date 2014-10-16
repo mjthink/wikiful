@@ -1,0 +1,66 @@
+Project Brief: Wiki
+
+Client: J. Random Didaskalos  
+
+Business Objective: Wikipedia is a great source of information for the public, but for academics like us, it has a lot of information we wouldn’t consider accurate. We want to build a version of Wikipedia called "Wikiful" that we’ll share with our friends who work in academia so we can create a version of Wikipedia only for information that’s been well-researched and validated by an academic paper.  
+
+Functionality Required: Everything Wikipedia does. Users must be able to create accounts, log in, find the content they’re looking for, and create new content. For this first version, we don’t have to worry about verification of edits or users.  
+
+Budget: $10,000  
+
+Project Deadline: One month from now for v1.0 
+
+
+In this assignment, you'll translate the project brief you just read into a set of user stories. When we get a brief that has some flexibility, we first want to figure out the simplest thing that we could build. To do so, we’ll have to make some assumptions. If it was a real project, we'd want to find some target customers and ask them questions before starting to write code (or at least make sure the client has done so), but while we're learning Rails that would just be a distraction.
+
+Let's assume that the key to this initial version is the ability to create articles in our wiki. Then we need to be able to categorize the articles so we can find articles related to a particular topic. We're going to have to authenticate users in some way – perhaps using an email address or their facebook account. Ideally we'd also be able to track and manage changes and show the whole edit history for a page and manage discussions about specific edits, but that's more than we need for the first version. So the key things we want are the ability to post articles, categorize them and provide a basic user login feature.
+
+
+Create a set of user stories for the Wiki project. For each user story, use the connextra format (“As a (Role) I want (Feature) so that (Benefit)”).
+
+Brainstorm some of the user stories that are missing from a more complete implementation and write them up in the same format (hint: edit, delete, view who edited, discuss edit, view edit history, ban user, etc.) Keep going until you have at least 5 extra stories
+
+
+=begin 
+# 1 User Stories : 
+
+As a reader, 
+I want to be able to view pages,
+so I can read the content.
+
+As an editor,
+I want to be able to post articles,
+so I can add new content.
+
+As an Author,
+I want to be able to categorize articles,
+so that they are easy to find.
+
+As an author,
+I want to be able to login/auth,
+so that my creates/edits are recorded.
+=end
+
+=begin
+# 2 User Stories - more complete
+
+As a user,
+I want to be able to search for articles,
+so I can easily find what I need
+
+As an admin,
+I want the ability to manage user accounts,
+so I can reset passwords / create / delete users.
+
+As an admin,
+I want to be able to restrict pages to specific authors/readers,
+so I can allow confidential content
+
+As any user,
+I want to be able to review changes made to a page,
+so I can see who made what edits.
+
+As an Author, 
+I want to be able to delete pages,
+so I can remove old / incorrect content
+=end
