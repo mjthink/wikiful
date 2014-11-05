@@ -1,2 +1,9 @@
-<h1>Welcome to the Article Index</h1>
+<div>
+  <h1><%= @article.title %></h1>
+  <p>Published <%= @article.created_at.strftime('%b %d %Y') %></p>
+  <p>Filed Under <% @article.categories.each do |category| %>
+      <%= category.name %>
+      <% end %>
+  <div> <%= @article.content %> </div>
+</div>
 
