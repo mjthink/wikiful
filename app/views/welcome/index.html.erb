@@ -1,20 +1,4 @@
 <h1>Welcome#index</h1>
 <p>This is the root page</p>
 
-<p>
-IP = <%= request.ip %>
-</p><p>
-Headers = <%= request.headers["user-agent"] %> 
-</p><p>
-GET? = <%= request.get? %> 
-</p><p>
-Method = <%= request.method %>
-</p><p>
-Method symbol = <%= request.method_symbol %>
-</p><p>
-Params <%= params %>
-</p><p>
-Session <%= session.options.methods %>
-</p><p>
-Cookies <%= cookies.each {|x| puts x} %>
-</p>
+
