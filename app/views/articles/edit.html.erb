@@ -1,10 +1,8 @@
-<div>
-  <h1><%= @article.title %></h1>
-  <div><p> <%= link_to "Edit this Article", edit_article_path %> </p></div>
+<h1>Edit <%= @article.title %></h1>
   <p>Published <%= @article.created_at.strftime('%b %d %Y') %></p>
   <p>Filed Under <% @article.categories.each do |category| %>
       <%= category.name %>
       <% end %>
-  <div> <%= @article.content %> </div>
+  <div id="main-content"> <%= render :partial => 'form' %> </div>
 </div>
 
