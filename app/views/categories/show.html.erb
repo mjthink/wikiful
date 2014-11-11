@@ -1,0 +1,6 @@
+<h1>Articles in <%= @category.name %></h1>
+<div>
+<% @category.articles.each do |article|  %>
+    <li>    <%= link_to article.title, article %> </li>
+    <% end %>
+</div>
