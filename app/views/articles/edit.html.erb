@@ -1,8 +1,5 @@
-<h1>Edit <%= @article.title %></h1>
-  <p>Published <%= @article.created_at.strftime('%b %d %Y') %></p>
-  <p>Filed Under <% @article.categories.each do |category| %>
-      <%= category.name %>
-      <% end %>
-  <div id="main-content"> <%= render :partial => 'form' %> </div>
+<%- model_class = Article -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
 </div>
-
+<%= render :partial => 'form' %>

@@ -7,39 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <% if flash[:notice] %>
-      <div> <%= flash[:notice] %> </div>
-    <% end %>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img alt="WikiFul" src="/assets/wlogo.png"></a>
-          <ul class="nav navbar-nav">
-            <li><h3>WikiFul Web</h3></li>
-            <li><a href="#">Button1</a></li>
-            <li><a href="#">Button2</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login (one day)</a></li>
-          </ul>
-      </div>
-    </nav>
-
-    <div class="row">
-
-    <div class="col-md-9">
-      <%= yield %>
+  <% if flash[:notice] %>
+    <div> <%= flash[:notice] %> </div>
+  <% end %>
+<div class="container-fluid">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img alt="WikiFul" src="/assets/wlogo.png"></a>
+        <ul class="nav navbar-nav">
+          <li><h3>WikiFul Web</h3></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/info">Info</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
     </div>
+  </nav>
 
+  <div class="row">
+    <div class="col-md-9">
+      <div class="container-fluid"><%= yield %></div>
+    </div>
     <div class="col-md-3">
       <h4>Categories</h4>
       <% @categories.each do |category| %>
         <p><%= link_to category.name, category %> </p>
       <% end %>
     </div>
-
-    </div>
-
   </div>
 
+  <nav class="navbar navbar-static-bottom" role="navigation">
+    <div class="container-fluid">
+      <p class="navbar-text">Built By <a href="#" class="navbar-link">MJenkins</a></p>
+    </div>
+  </nav>
+
+</div>
 </body>
 </html>
