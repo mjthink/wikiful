@@ -10,22 +10,32 @@
     <% if flash[:notice] %>
       <div> <%= flash[:notice] %> </div>
     <% end %>
- 
-
-  <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img alt="WikiFul" src="/assets/wlogo.png"></a>
+          <ul class="nav navbar-nav">
+            <li><h3>WikiFul Web</h3></li>
+            <li><a href="#">Button1</a></li>
+            <li><a href="#">Button2</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login (one day)</a></li>
+          </ul>
+      </div>
+    </nav>
 
     <div class="row">
 
-      <div class="col-md-9">
-        <%= yield %>
-      </div>
+    <div class="col-md-9">
+      <%= yield %>
+    </div>
 
-      <div class="col-md-3">
-        <h4>Categories</h4>
-        <% @categories.each do |category| %>
-          <p><%= link_to category.name, category %> </p>
-        <% end %>
-      </div>
+    <div class="col-md-3">
+      <h4>Categories</h4>
+      <% @categories.each do |category| %>
+        <p><%= link_to category.name, category %> </p>
+      <% end %>
+    </div>
 
     </div>
 
