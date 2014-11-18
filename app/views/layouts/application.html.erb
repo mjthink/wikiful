@@ -8,7 +8,7 @@
 </head>
 <body>
   <% if flash[:notice] %>
-    <div> <%= flash[:notice] %> </div>
+      <% flash.each do |name, msg| %><%= content_tag :div, msg, id: "flash_#{name}" %><% end %>
   <% end %>
 <div class="container-fluid">
   <nav class="navbar navbar-default" role="navigation">
