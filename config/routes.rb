@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   resources :articles
 
 #categories
-  get 'categories' => 'categories#index'
-  get 'categories/:id' => 'categories#show', as: :category
-  get 'category/:id' => redirect('categories/%{id}')
+  resources :categories
+#  get 'categories' => 'categories#index'
+#  get 'categories/:id' => 'categories#show', as: :category
+#  get 'category/:id' => redirect('categories/%{id}')
 
 #test
   get '/test' => redirect('articles')

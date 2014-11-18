@@ -1,6 +1,6 @@
 <%- model_class = Article -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %> Index</h1>
 </div>
 <table class="table table-striped">
   <thead>
@@ -14,9 +14,9 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= link_to article.title, article_path(article) %></td>
-        <td><%= article.content.truncate(360,  separator: ' ')%></td>
-        <td><%=l article.created_at, :format => :short_datetime  %></td>
+        <td> <%= link_to article.title, article_path(article) %></td>
+        <td> <%= article.content.truncate(360,  separator: ' ')%></td>
+        <td> <%=l article.created_at, :format => :short_datetime  %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_article_path(article), :class => 'btn btn-default btn-xs' %>
